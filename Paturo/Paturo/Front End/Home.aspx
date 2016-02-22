@@ -12,39 +12,63 @@
         .auto-style2 {
             width: 150px;
         }
+        .auto-style3 {
+            width: 752px;
+            text-align: center;
+        }
+        .auto-style5 {
+            text-align: right;
+        }
+        .auto-style6 {
+            width: 100%;
+            height: 83px;
+        }
     </style>
 </head>
 <body>
 
     <form id="form1" runat="server">
+        <table class="auto-style1">
+            <tr>
+                <td>&nbsp;</td>
+                <td class="auto-style5">
+                    <asp:Button ID="LogInBtn" runat="server" Text="Log In" />
+                    <asp:Button ID="RegistrationBtn" runat="server" Text="Sign Up" />
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+    <br />
+
     <div>
-        <br />
+        <table class="auto-style6">
+            <tr>
+                <td>&nbsp;</td>
+                <td class="auto-style3">
+                    <asp:TextBox ID="searchTB" runat="server" BackColor="White" BorderColor="Black" BorderStyle="Solid" Font-Size="XX-Large" Height="41px" Width="597px" Wrap="False">Search..</asp:TextBox>
+                    <asp:Button ID="searchBtn" runat="server" OnClick="searchBtn_Click1" Text="Search" />
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
         <br />
         <table class="auto-style1">
             <tr>
                 <td>&nbsp;</td>
-                <td class="auto-style2">&nbsp;</td>
-                <td class="auto-style2">&nbsp;</td>
-                <td class="auto-style2">&nbsp;</td>
-                <td class="auto-style2">&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td>&nbsp;</td>
                 <td class="auto-style2">
-        <asp:Button ID="LanguageBtn" runat="server" Text="Language" BackColor="#E8D0A9" BorderColor="#E8D0A9" BorderStyle="None" Font-Bold="True" Font-Names="Gill Sans MT" Font-Size="Larger" ForeColor="White" Height="150px" Width="150px" />
+        <asp:Button ID="LanguageBtn" runat="server" Text="Language" BackColor="White" BorderColor="Black" BorderStyle="Solid" Font-Bold="True" Font-Names="Gill Sans MT" Font-Size="Larger" ForeColor="Black" Height="150px" Width="150px" />
     
                 </td>
                 <td class="auto-style2">
-        <asp:Button ID="MathBtn" runat="server" Text="Math" BackColor="#C1DAD6" BorderColor="#C1DAD6" BorderStyle="None" Font-Bold="True" Font-Names="Gill Sans MT" Font-Size="Larger" ForeColor="White" Height="150px" Width="150px" />
+        <asp:Button ID="MathBtn" runat="server" Text="Math" BackColor="White" BorderColor="Black" BorderStyle="Solid" Font-Bold="True" Font-Names="Gill Sans MT" Font-Size="Larger" ForeColor="Black" Height="150px" Width="150px" />
     
                 </td>
                 <td class="auto-style2">
-        <asp:Button ID="ScienceBtn" runat="server" Text="Science" BackColor="#ACD1E9" BorderColor="#ACD1E9" BorderStyle="None" Font-Bold="True" Font-Names="Gill Sans MT" Font-Size="Larger" ForeColor="White" Height="150px" Width="150px" />
+        <asp:Button ID="ScienceBtn" runat="server" Text="Science" BackColor="White" BorderColor="Black" BorderStyle="Solid" Font-Bold="True" Font-Names="Gill Sans MT" Font-Size="Larger" ForeColor="Black" Height="150px" Width="150px" />
     
                 </td>
                 <td class="auto-style2">
-        <asp:Button ID="ComputerBtn" runat="server" Text="Computer" BackColor="#C1DAD6" BorderColor="#C1DAD6" BorderStyle="None" Font-Bold="True" Font-Names="Gill Sans MT" Font-Size="Larger" ForeColor="White" Height="150px" Width="150px" />
+        <asp:Button ID="ComputerBtn" runat="server" Text="Computer" BackColor="White" BorderColor="Black" BorderStyle="Solid" Font-Bold="True" Font-Names="Gill Sans MT" Font-Size="Larger" ForeColor="Black" Height="150px" Width="150px" />
     
                 </td>
                 <td>&nbsp;</td>
@@ -52,19 +76,19 @@
             <tr>
                 <td>&nbsp;</td>
                 <td class="auto-style2">
-        <asp:Button ID="ArtBtn" runat="server" Text="Art" BackColor="#E8D0A9" BorderColor="#E8D0A9" BorderStyle="None" Font-Bold="True" Font-Names="Gill Sans MT" Font-Size="Larger" ForeColor="White" Height="150px" Width="150px" />
+        <asp:Button ID="ArtBtn" runat="server" Text="Art" BackColor="White" BorderColor="Black" BorderStyle="Solid" Font-Bold="True" Font-Names="Gill Sans MT" Font-Size="Larger" ForeColor="Black" Height="150px" Width="150px" />
     
                 </td>
                 <td class="auto-style2">
-        <asp:Button ID="MusicBtn" runat="server" Text="Music" BackColor="#E8D0A9" BorderColor="#E8D0A9" BorderStyle="None" Font-Bold="True" Font-Names="Gill Sans MT" Font-Size="Larger" ForeColor="White" Height="150px" Width="150px" />
+        <asp:Button ID="MusicBtn" runat="server" Text="Music" BackColor="White" BorderColor="Black" BorderStyle="Solid" Font-Bold="True" Font-Names="Gill Sans MT" Font-Size="Larger" ForeColor="Black" Height="150px" Width="150px" />
     
                 </td>
                 <td class="auto-style2">
-        <asp:Button ID="SportBtn" runat="server" Text="Sport" BackColor="#E8D0A9" BorderColor="#E8D0A9" BorderStyle="None" Font-Bold="True" Font-Names="Gill Sans MT" Font-Size="Larger" ForeColor="White" Height="150px" Width="150px" />
+        <asp:Button ID="SportBtn" runat="server" Text="Sport" BackColor="White" BorderColor="Black" BorderStyle="Solid" Font-Bold="True" Font-Names="Gill Sans MT" Font-Size="Larger" ForeColor="Black" Height="150px" Width="150px" />
     
                 </td>
                 <td class="auto-style2">
-        <asp:Button ID="OthersBtn" runat="server" Text="Others" BackColor="#E8D0A9" BorderColor="#E8D0A9" BorderStyle="None" Font-Bold="True" Font-Names="Gill Sans MT" Font-Size="Larger" ForeColor="White" Height="150px" Width="150px" />
+        <asp:Button ID="OthersBtn" runat="server" Text="Others" BackColor="White" BorderColor="Black" BorderStyle="Solid" Font-Bold="True" Font-Names="Gill Sans MT" Font-Size="Larger" ForeColor="Black" Height="150px" Width="150px" />
     
                 </td>
                 <td>&nbsp;</td>

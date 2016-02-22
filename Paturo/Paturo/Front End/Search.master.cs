@@ -7,14 +7,9 @@ using System.Web.UI.WebControls;
 
 namespace Paturo.Front_End
 {
-    public partial class Home : System.Web.UI.Page
+    public partial class Search : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void searchBtn_Click1(object sender, EventArgs e)
         {
 
         }
