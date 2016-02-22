@@ -50,3 +50,5 @@ C:\Users\User\Documents\GitHub\TECHPRE-Project\Paturo\Paturo\bin\Microsoft.Owin.
 C:\Users\User\Documents\GitHub\TECHPRE-Project\Paturo\Paturo\obj\Debug\Paturo.csprojResolveAssemblyReference.cache
 C:\Users\User\Documents\GitHub\TECHPRE-Project\Paturo\Paturo\obj\Debug\Paturo.dll
 C:\Users\User\Documents\GitHub\TECHPRE-Project\Paturo\Paturo\obj\Debug\Paturo.pdb
+C:\Users\Nolan\Documents\GitHub\TECHPRE-Project\Paturo\Paturo\obj\Debug\Paturo.csprojResolveAssemblyReference.cache
+C:\Users\Nolan\Documents\GitHub\TECHPRE-Project\Paturo\Paturo\obj\Debug\Paturo.dll
