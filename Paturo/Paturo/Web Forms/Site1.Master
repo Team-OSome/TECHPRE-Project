@@ -1,0 +1,43 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Paturo.Web_Forms.Site1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+        .auto-style2 {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <table class="auto-style1">
+            <tr>
+                <td class="auto-style2">
+                    &nbsp;<asp:Label ID="usernameLbl" runat="server"></asp:Label>
+                    <asp:Button ID="LogOutBtn" runat="server" OnClick="LogOutBtn_Click" Text="Log Out" />
+                    <asp:Button ID="LogInBtn" runat="server" Text="Log In" OnClick="LogInBtn_Click" />
+                    <br />
+                </td>
+            </tr>
+            <tr>
+                <td>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server">
+        
+        </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+        </table>
+    </div>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [PERSONAL_INFO]"></asp:SqlDataSource>
+    </form>
+</body>
+</html>

@@ -1,0 +1,45 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Search.master.cs" Inherits="Paturo.Front_End.Search" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+        .auto-style2 {
+            width: 175px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <table class="auto-style1">
+            <tr>
+                <td class="auto-style2">&nbsp;</td>
+                <td>master page test</td>
+            </tr>
+            <tr>
+                <td class="auto-style2">Category:<br />
+                    <asp:DropDownList ID="categoryDDL" runat="server" AutoPostBack="True" DataSourceID="categoriesDS" DataTextField="category_name" DataValueField="category_id" OnSelectedIndexChanged="categoryDDL_SelectedIndexChanged">
+                    </asp:DropDownList>
+                    <br />
+                    <br />
+                </td>
+                <td>
+        <asp:ContentPlaceHolder ID="SearchPlaceHolder" runat="server">
+        
+        </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+        </table>
+    </div>
+        <asp:SqlDataSource ID="categoriesDS" runat="server" ConnectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\Paturo.mdf;Integrated Security=True" ProviderName="System.Data.SqlClient" SelectCommand="SELECT * FROM [A.CATEGORY]"></asp:SqlDataSource>
+    </form>
+</body>
+</html>
