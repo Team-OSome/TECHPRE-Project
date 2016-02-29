@@ -1,9 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Web Forms/Site1.Master" AutoEventWireup="true" CodeBehind="HomePage.aspx.cs" Inherits="Paturo.Web_Forms.HomePage" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
-        .auto-style3 {
-            width: 300px;
-        }
         .auto-style4 {
             text-align: center;
         }
@@ -41,32 +38,32 @@
         <tr>
             <td>&nbsp;</td>
             <td class="auto-style5">
-                <asp:Button ID="Button1" runat="server" Text="Button" />
+                <asp:Button ID="LanguageBtn" runat="server" Text="Language" OnClick="LanguageBtn_Click" />
             </td>
             <td class="auto-style5">
-                <asp:Button ID="Button3" runat="server" Text="Button" />
+                <asp:Button ID="MathBtn" runat="server" Text="Math" OnClick="MathBtn_Click" />
             </td>
             <td class="auto-style5">
-                <asp:Button ID="Button4" runat="server" Text="Button" />
+                <asp:Button ID="ScienceBtn" runat="server" Text="Science" OnClick="ScienceBtn_Click" />
             </td>
             <td class="auto-style5">
-                <asp:Button ID="Button7" runat="server" Text="Button" />
+                <asp:Button ID="ComputerBtn" runat="server" Text="Computer" OnClick="ComputerBtn_Click" />
             </td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td>&nbsp;</td>
             <td class="auto-style5">
-                <asp:Button ID="Button2" runat="server" Text="Button" />
+                <asp:Button ID="ArtBtn" runat="server" Text="Art" OnClick="ArtBtn_Click" />
             </td>
             <td class="auto-style5">
-                <asp:Button ID="Button5" runat="server" Text="Button" />
+                <asp:Button ID="MusicBtn" runat="server" Text="Music" OnClick="MusicBtn_Click" />
             </td>
             <td class="auto-style5">
-                <asp:Button ID="Button6" runat="server" Text="Button" />
+                <asp:Button ID="SportBtn" runat="server" Text="Sport" OnClick="SportBtn_Click" />
             </td>
             <td class="auto-style5">
-                <asp:Button ID="Button8" runat="server" Text="Button" />
+                <asp:Button ID="OthersBtn" runat="server" Text="Others" OnClick="OthersBtn_Click" />
             </td>
             <td>&nbsp;</td>
         </tr>
@@ -82,37 +79,4 @@
     <br />
     <br />
 
-    <table class="auto-style1">
-        <tr>
-            <td>&nbsp;</td>
-            <td class="auto-style3" colspan="2">&nbsp;</td>
-            <td class="auto-style3">&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>&nbsp;</td>
-            <td class="auto-style4" colspan="3">
-                &nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>&nbsp;</td>
-            <td class="auto-style3" colspan="2">&nbsp;</td>
-            <td class="auto-style3">&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>&nbsp;</td>
-            <td class="auto-style3">&nbsp;</td>
-            <td class="auto-style3">&nbsp;</td>
-            <td class="auto-style3">&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>&nbsp;</td>
-            <td class="auto-style3" colspan="2">&nbsp;</td>
-            <td class="auto-style3">&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-    </table>
-</asp:Content>
+    </asp:Content>

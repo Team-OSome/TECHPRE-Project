@@ -10,7 +10,7 @@
 namespace Paturo.Web_Forms {
     
     
-    public partial class HomePage {
+    public partial class SearchPage {
         
         /// <summary>
         /// searchTB control.
@@ -31,75 +31,39 @@ namespace Paturo.Web_Forms {
         protected global::System.Web.UI.WebControls.Button searchBtn;
         
         /// <summary>
-        /// LanguageBtn control.
+        /// categoryDDL control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button LanguageBtn;
+        protected global::System.Web.UI.WebControls.DropDownList categoryDDL;
         
         /// <summary>
-        /// MathBtn control.
+        /// categoryDS control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button MathBtn;
+        protected global::System.Web.UI.WebControls.SqlDataSource categoryDS;
         
         /// <summary>
-        /// ScienceBtn control.
+        /// listDS control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ScienceBtn;
+        protected global::System.Web.UI.WebControls.SqlDataSource listDS;
         
         /// <summary>
-        /// ComputerBtn control.
+        /// ListView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ComputerBtn;
-        
-        /// <summary>
-        /// ArtBtn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ArtBtn;
-        
-        /// <summary>
-        /// MusicBtn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button MusicBtn;
-        
-        /// <summary>
-        /// SportBtn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button SportBtn;
-        
-        /// <summary>
-        /// OthersBtn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button OthersBtn;
+        protected global::System.Web.UI.WebControls.ListView ListView1;
     }
 }

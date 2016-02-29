@@ -208,6 +208,7 @@
     <Content Include="Web Forms\HomePage.aspx" />
     <Content Include="Web Forms\LogIn.aspx" />
     <Content Include="Web Forms\Register.aspx" />
+    <Content Include="Web Forms\SearchPage.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <None Include="Project_Readme.html" />
@@ -365,6 +366,13 @@
     </Compile>
     <Compile Include="Web Forms\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web Forms\SearchPage.aspx.cs">
+      <DependentUpon>SearchPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web Forms\SearchPage.aspx.designer.cs">
+      <DependentUpon>SearchPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Web Forms\Site1.Master.cs">
       <DependentUpon>Site1.Master</DependentUpon>
