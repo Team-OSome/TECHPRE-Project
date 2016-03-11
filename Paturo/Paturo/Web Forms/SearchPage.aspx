@@ -8,6 +8,9 @@
             width: 500px;
             text-align: center;
         }
+        .auto-style5 {
+            margin-top: 0px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder" runat="server">
@@ -17,7 +20,7 @@
             <td>&nbsp;</td>
             <td class="auto-style4">
                 <asp:TextBox ID="searchTB" runat="server"></asp:TextBox>
-                <asp:Button ID="searchBtn" runat="server" Text="Search" />
+                <asp:Button ID="searchBtn" runat="server" Text="Search" OnClick="searchBtn_Click" />
             </td>
             <td>&nbsp;</td>
         </tr>
@@ -27,21 +30,23 @@
     <table class="auto-style1">
         <tr>
             <td class="auto-style3">Category:<br />
-                <asp:DropDownList ID="categoryDDL" runat="server" DataSourceID="categoryDS" DataTextField="category_name" DataValueField="category_id">
+                <asp:Label ID="categoryLbl" runat="server"></asp:Label>
+                <asp:Button ID="changeBtn" runat="server" CssClass="auto-style5" OnClick="changeBtn_Click" Text="change" />
+                <asp:DropDownList ID="categoryDDL" runat="server" DataSourceID="categoryDS" DataTextField="category_name" DataValueField="category_name">
                 </asp:DropDownList>
                 <br />
+                <asp:Button ID="selectBtn" runat="server" Text="Select" OnClick="selectBtn_Click" />
+                <asp:Button ID="cancelBtn" runat="server" Text="Cancel" />
                 <br />
                 <br />
                 <br />
                 <br />
                 <br />
-                <asp:SqlDataSource ID="categoryDS" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [A.CATEGORY]"></asp:SqlDataSource>
+                <asp:SqlDataSource ID="categoryDS" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [category_name] FROM [A.CATEGORY]"></asp:SqlDataSource>
                 <asp:SqlDataSource ID="listDS" runat="server"></asp:SqlDataSource>
             </td>
             <td>
-                <asp:ListView ID="ListView1" runat="server">
-                </asp:ListView>
-            </td>
+                &nbsp;</td>
         </tr>
     </table>
 </asp:Content>

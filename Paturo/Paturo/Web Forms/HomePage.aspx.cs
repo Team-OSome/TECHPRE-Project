@@ -11,57 +11,57 @@ namespace Paturo.Web_Forms
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(Session["category"] == null)
+            if (Session["category"] == null)
             {
-                Session["category"] = 0;
+                Session["category"] = "All";
             }
         }
 
         protected void LanguageBtn_Click(object sender, EventArgs e)
         {
-            Session["category"] = 1;    //need a SQL function to that will return the id of the vategory based on the category name.
+            Session["category"] = "Language";    //need a SQL function to that will return the id of the vategory based on the category name.
             Response.Redirect("SearchPage.aspx");
         }
 
         protected void MathBtn_Click(object sender, EventArgs e)
         {
-            Session["category"] = 2;
+            Session["category"] = "Math";
             Response.Redirect("SearchPage.aspx");
         }
 
         protected void ScienceBtn_Click(object sender, EventArgs e)
         {
-            Session["category"] = 3;
+            Session["category"] = "Science";
             Response.Redirect("SearchPage.aspx");
         }
 
         protected void ComputerBtn_Click(object sender, EventArgs e)
         {
-            Session["category"] = 4;
+            Session["category"] = "Computer";
             Response.Redirect("SearchPage.aspx");
         }
 
         protected void ArtBtn_Click(object sender, EventArgs e)
         {
-            Session["category"] = 5;
+            Session["category"] = "Art";
             Response.Redirect("SearchPage.aspx");
         }
 
         protected void MusicBtn_Click(object sender, EventArgs e)
         {
-            Session["category"] = 6;
+            Session["category"] = "Music";
             Response.Redirect("SearchPage.aspx");
         }
 
         protected void SportBtn_Click(object sender, EventArgs e)
         {
-            Session["category"] = 7;
+            Session["category"] = "Sport";
             Response.Redirect("SearchPage.aspx");
         }
 
         protected void OthersBtn_Click(object sender, EventArgs e)
         {
-            Session["category"] = 8;
+            Session["category"] = "Others";
             Response.Redirect("SearchPage.aspx");
         }
     }
