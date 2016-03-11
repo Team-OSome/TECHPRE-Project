@@ -338,6 +338,8 @@
     <Compile Include="lib\AccountManager.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="lib\PreferenceManager.cs" />
+    <Compile Include="lib\ScheduleManager.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewSwitcher.ascx.cs">
