@@ -205,6 +205,7 @@
     <Content Include="Scripts\_references.js" />
     <Content Include="Global.asax" />
     <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Web Forms\AccountSettings.aspx" />
     <Content Include="Web Forms\HomePage.aspx" />
     <Content Include="Web Forms\LogIn.aspx" />
     <Content Include="Web Forms\Register.aspx" />
@@ -345,6 +346,13 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Web Forms\AccountSettings.aspx.cs">
+      <DependentUpon>AccountSettings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web Forms\AccountSettings.aspx.designer.cs">
+      <DependentUpon>AccountSettings.aspx</DependentUpon>
     </Compile>
     <Compile Include="Web Forms\HomePage.aspx.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>
