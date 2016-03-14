@@ -1,8 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Web Forms/Site1.Master" AutoEventWireup="true" CodeBehind="SearchPage.aspx.cs" Inherits="Paturo.Web_Forms.SearchPage" %>
+<%@ Register assembly="System.Web.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" namespace="System.Web.UI.DataVisualization.Charting" tagprefix="asp" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
         .auto-style3 {
             width: 200px;
+            height: 298px;
         }
         .auto-style4 {
             width: 500px;
@@ -10,6 +12,10 @@
         }
         .auto-style5 {
             margin-top: 0px;
+        }
+        .auto-style6 {
+            height: 298px;
+            text-align: center;
         }
     </style>
 </asp:Content>
@@ -49,179 +55,30 @@
                     </SelectParameters>
                 </asp:SqlDataSource>
             </td>
-            <td>
-                <asp:ListView ID="ListView1" runat="server" DataKeyNames="pref_id" DataSourceID="listDS">
-                    <AlternatingItemTemplate>
-                        <tr style="background-color: #FAFAD2;color: #284775;">
-                            <td>
-                                <asp:Label ID="idLabel" runat="server" Text='<%# Eval("id") %>' />
-                            </td>
-                            <td>
-                                <asp:Label ID="pref_idLabel" runat="server" Text='<%# Eval("pref_id") %>' />
-                            </td>
-                            <td>
-                                <asp:Label ID="categoryLabel" runat="server" Text='<%# Eval("category") %>' />
-                            </td>
-                            <td>
-                                <asp:Label ID="subjectLabel" runat="server" Text='<%# Eval("subject") %>' />
-                            </td>
-                            <td>
-                                <asp:Label ID="descriptionLabel" runat="server" Text='<%# Eval("description") %>' />
-                            </td>
-                            <td>
-                                <asp:Label ID="target_studentsLabel" runat="server" Text='<%# Eval("target_students") %>' />
-                            </td>
-                            <td>
-                                <asp:Label ID="price_infoLabel" runat="server" Text='<%# Eval("price_info") %>' />
-                            </td>
-                        </tr>
-                    </AlternatingItemTemplate>
-                    <EditItemTemplate>
-                        <tr style="background-color: #FFCC66;color: #000080;">
-                            <td>
-                                <asp:Button ID="UpdateButton" runat="server" CommandName="Update" Text="Update" />
-                                <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="Cancel" />
-                            </td>
-                            <td>
-                                <asp:TextBox ID="idTextBox" runat="server" Text='<%# Bind("id") %>' />
-                            </td>
-                            <td>
-                                <asp:Label ID="pref_idLabel1" runat="server" Text='<%# Eval("pref_id") %>' />
-                            </td>
-                            <td>
-                                <asp:TextBox ID="categoryTextBox" runat="server" Text='<%# Bind("category") %>' />
-                            </td>
-                            <td>
-                                <asp:TextBox ID="subjectTextBox" runat="server" Text='<%# Bind("subject") %>' />
-                            </td>
-                            <td>
-                                <asp:TextBox ID="descriptionTextBox" runat="server" Text='<%# Bind("description") %>' />
-                            </td>
-                            <td>
-                                <asp:TextBox ID="target_studentsTextBox" runat="server" Text='<%# Bind("target_students") %>' />
-                            </td>
-                            <td>
-                                <asp:TextBox ID="price_infoTextBox" runat="server" Text='<%# Bind("price_info") %>' />
-                            </td>
-                        </tr>
-                    </EditItemTemplate>
-                    <EmptyDataTemplate>
-                        <table runat="server" style="background-color: #FFFFFF;border-collapse: collapse;border-color: #999999;border-style:none;border-width:1px;">
-                            <tr>
-                                <td>No data was returned.</td>
-                            </tr>
-                        </table>
-                    </EmptyDataTemplate>
-                    <InsertItemTemplate>
-                        <tr style="">
-                            <td>
-                                <asp:Button ID="InsertButton" runat="server" CommandName="Insert" Text="Insert" />
-                                <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="Clear" />
-                            </td>
-                            <td>
-                                <asp:TextBox ID="idTextBox" runat="server" Text='<%# Bind("id") %>' />
-                            </td>
-                            <td>
-                                <asp:TextBox ID="pref_idTextBox" runat="server" Text='<%# Bind("pref_id") %>' />
-                            </td>
-                            <td>
-                                <asp:TextBox ID="categoryTextBox" runat="server" Text='<%# Bind("category") %>' />
-                            </td>
-                            <td>
-                                <asp:TextBox ID="subjectTextBox" runat="server" Text='<%# Bind("subject") %>' />
-                            </td>
-                            <td>
-                                <asp:TextBox ID="descriptionTextBox" runat="server" Text='<%# Bind("description") %>' />
-                            </td>
-                            <td>
-                                <asp:TextBox ID="target_studentsTextBox" runat="server" Text='<%# Bind("target_students") %>' />
-                            </td>
-                            <td>
-                                <asp:TextBox ID="price_infoTextBox" runat="server" Text='<%# Bind("price_info") %>' />
-                            </td>
-                        </tr>
-                    </InsertItemTemplate>
-                    <ItemTemplate>
-                        <tr style="background-color: #FFFBD6;color: #333333;">
-                            <td>
-                                <asp:Label ID="idLabel" runat="server" Text='<%# Eval("id") %>' />
-                            </td>
-                            <td>
-                                <asp:Label ID="pref_idLabel" runat="server" Text='<%# Eval("pref_id") %>' />
-                            </td>
-                            <td>
-                                <asp:Label ID="categoryLabel" runat="server" Text='<%# Eval("category") %>' />
-                            </td>
-                            <td>
-                                <asp:Label ID="subjectLabel" runat="server" Text='<%# Eval("subject") %>' />
-                            </td>
-                            <td>
-                                <asp:Label ID="descriptionLabel" runat="server" Text='<%# Eval("description") %>' />
-                            </td>
-                            <td>
-                                <asp:Label ID="target_studentsLabel" runat="server" Text='<%# Eval("target_students") %>' />
-                            </td>
-                            <td>
-                                <asp:Label ID="price_infoLabel" runat="server" Text='<%# Eval("price_info") %>' />
-                            </td>
-                        </tr>
-                    </ItemTemplate>
-                    <LayoutTemplate>
-                        <table runat="server">
-                            <tr runat="server">
-                                <td runat="server">
-                                    <table id="itemPlaceholderContainer" runat="server" border="1" style="background-color: #FFFFFF;border-collapse: collapse;border-color: #999999;border-style:none;border-width:1px;font-family: Verdana, Arial, Helvetica, sans-serif;">
-                                        <tr runat="server" style="background-color: #FFFBD6;color: #333333;">
-                                            <th runat="server">id</th>
-                                            <th runat="server">pref_id</th>
-                                            <th runat="server">category</th>
-                                            <th runat="server">subject</th>
-                                            <th runat="server">description</th>
-                                            <th runat="server">target_students</th>
-                                            <th runat="server">price_info</th>
-                                        </tr>
-                                        <tr id="itemPlaceholder" runat="server">
-                                        </tr>
-                                    </table>
-                                </td>
-                            </tr>
-                            <tr runat="server">
-                                <td runat="server" style="text-align: center;background-color: #FFCC66;font-family: Verdana, Arial, Helvetica, sans-serif;color: #333333;">
-                                    <asp:DataPager ID="DataPager1" runat="server">
-                                        <Fields>
-                                            <asp:NextPreviousPagerField ButtonType="Button" ShowFirstPageButton="True" ShowLastPageButton="True" />
-                                        </Fields>
-                                    </asp:DataPager>
-                                </td>
-                            </tr>
-                        </table>
-                    </LayoutTemplate>
-                    <SelectedItemTemplate>
-                        <tr style="background-color: #FFCC66;font-weight: bold;color: #000080;">
-                            <td>
-                                <asp:Label ID="idLabel" runat="server" Text='<%# Eval("id") %>' />
-                            </td>
-                            <td>
-                                <asp:Label ID="pref_idLabel" runat="server" Text='<%# Eval("pref_id") %>' />
-                            </td>
-                            <td>
-                                <asp:Label ID="categoryLabel" runat="server" Text='<%# Eval("category") %>' />
-                            </td>
-                            <td>
-                                <asp:Label ID="subjectLabel" runat="server" Text='<%# Eval("subject") %>' />
-                            </td>
-                            <td>
-                                <asp:Label ID="descriptionLabel" runat="server" Text='<%# Eval("description") %>' />
-                            </td>
-                            <td>
-                                <asp:Label ID="target_studentsLabel" runat="server" Text='<%# Eval("target_students") %>' />
-                            </td>
-                            <td>
-                                <asp:Label ID="price_infoLabel" runat="server" Text='<%# Eval("price_info") %>' />
-                            </td>
-                        </tr>
-                    </SelectedItemTemplate>
-                </asp:ListView>
+            <td class="auto-style6">
+                <asp:GridView ID="searchGridView" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="pref_id" DataSourceID="listDS" ForeColor="#333333" GridLines="None" Width="852px">
+                    <AlternatingRowStyle BackColor="White" />
+                    <Columns>
+                        <asp:CommandField ShowSelectButton="True" />
+                        <asp:BoundField DataField="subject" HeaderText="subject" SortExpression="subject" />
+                        <asp:BoundField DataField="category" HeaderText="category" SortExpression="category" />
+                        <asp:BoundField DataField="description" HeaderText="description" SortExpression="description" />
+                        <asp:BoundField DataField="target_students" HeaderText="target_students" SortExpression="target_students" />
+                        <asp:BoundField DataField="price_info" HeaderText="price_info" SortExpression="price_info" />
+                        <asp:ButtonField ButtonType="Button" Text="Open" CommandName="openBtn" />
+                    </Columns>
+                    <EditRowStyle BackColor="#2461BF" />
+                    <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                    <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                    <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                    <RowStyle BackColor="#EFF3FB" />
+                    <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                    <SortedAscendingCellStyle BackColor="#F5F7FB" />
+                    <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+                    <SortedDescendingCellStyle BackColor="#E9EBEF" />
+                    <SortedDescendingHeaderStyle BackColor="#4870BE" />
+                </asp:GridView>
+                <br />
             </td>
         </tr>
     </table>

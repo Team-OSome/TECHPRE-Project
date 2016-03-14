@@ -45,5 +45,13 @@ namespace Paturo.Web_Forms
         {
 
         }
+
+        protected void searchGridView_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName.CompareTo("openBtn") == 0)
+            {
+                
+            }
+        }
     }
 }
