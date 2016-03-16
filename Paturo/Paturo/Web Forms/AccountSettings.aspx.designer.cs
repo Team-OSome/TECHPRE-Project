@@ -31,13 +31,13 @@ namespace Paturo.Web_Forms {
         protected global::System.Web.UI.WebControls.TextBox mNameTxtBox;
         
         /// <summary>
-        /// categoryTxtBox control.
+        /// categoryDropDownList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox categoryTxtBox;
+        protected global::System.Web.UI.WebControls.DropDownList categoryDropDownList;
         
         /// <summary>
         /// lNameTxtBox control.
@@ -130,22 +130,22 @@ namespace Paturo.Web_Forms {
         protected global::System.Web.UI.WebControls.TextBox cityTxtBox;
         
         /// <summary>
-        /// dayTxtBox control.
+        /// startingTimeTxtBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox dayTxtBox;
+        protected global::System.Web.UI.WebControls.TextBox startingTimeTxtBox;
         
         /// <summary>
-        /// timeTxtBox control.
+        /// EndTimeTxtBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox timeTxtBox;
+        protected global::System.Web.UI.WebControls.TextBox EndTimeTxtBox;
         
         /// <summary>
         /// zipTxtBox control.
@@ -155,6 +155,15 @@ namespace Paturo.Web_Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox zipTxtBox;
+        
+        /// <summary>
+        /// availabilityCheckBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBoxList availabilityCheckBox;
         
         /// <summary>
         /// updatePIBtn control.

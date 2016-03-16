@@ -111,6 +111,7 @@
         .auto-style32 {
             height: 72px;
         }
+        .auto-style33 {}
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder" runat="server">
@@ -157,7 +158,13 @@
             <td class="auto-style18">&nbsp;</td>
             <td class="auto-style14">Category:</td>
             <td class="auto-style15">
-                <asp:TextBox ID="categoryTxtBox" runat="server" Width="186px"></asp:TextBox>
+                <asp:DropDownList ID="categoryDropDownList" runat="server" CssClass="auto-style33" Width="186px">
+                    <asp:ListItem Value="Educational"></asp:ListItem>
+                    <asp:ListItem Value="Sports"></asp:ListItem>
+                    <asp:ListItem Value="Music"></asp:ListItem>
+                    <asp:ListItem Value="Arts"></asp:ListItem>
+                    <asp:ListItem Value="Others"></asp:ListItem>
+                </asp:DropDownList>
             </td>
             <td class="auto-style16"></td>
         </tr>
@@ -242,11 +249,12 @@
                 <asp:TextBox ID="cityTxtBox" runat="server" Width="204px"></asp:TextBox>
             </td>
             <td class="auto-style19">&nbsp;</td>
-            <td class="auto-style9">Schedule (day - time)</td>
+            <td class="auto-style9">Time Schedule<h6>(Must be mm/dd and 24HR Time) </h6>
+            </td>
             <td class="auto-style7">
-                <asp:TextBox ID="dayTxtBox" runat="server" Width="83px"></asp:TextBox>
+                <asp:TextBox ID="startingTimeTxtBox" runat="server" Width="83px"></asp:TextBox>
 &nbsp;-
-                <asp:TextBox ID="timeTxtBox" runat="server" Width="83px"></asp:TextBox>
+                <asp:TextBox ID="EndTimeTxtBox" runat="server" Width="83px"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
         </tr>
@@ -258,9 +266,18 @@
             </td>
             <td class="auto-style19">&nbsp;</td>
             <td class="auto-style9">
-                <h6>(Must be mm/dd/yyyy and 24HR Time) </h6>
+                Available Days:</td>
+            <td class="auto-style7">
+                <asp:CheckBoxList ID="availabilityCheckBox" runat="server">
+                    <asp:ListItem Value="Mon">Monday</asp:ListItem>
+                    <asp:ListItem Value="Tue">Tuesday</asp:ListItem>
+                    <asp:ListItem Value="Wed">Wednesday</asp:ListItem>
+                    <asp:ListItem Value="Thu">Thursday</asp:ListItem>
+                    <asp:ListItem Value="Fri">Friday</asp:ListItem>
+                    <asp:ListItem Value="Sat">Saturday</asp:ListItem>
+                    <asp:ListItem Value="Sun">Sunday</asp:ListItem>
+                </asp:CheckBoxList>
             </td>
-            <td class="auto-style7">&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>

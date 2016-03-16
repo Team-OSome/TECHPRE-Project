@@ -160,6 +160,21 @@ namespace Paturo.Libs
             }          
         }
 
+        public int getID(String email_address)
+        {
+            string query = "select id from PERSONAL_INFO where email_address = '" + email_address + "';";
+            int id;
+
+            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+            SqlCommand com = new SqlCommand(query, conn);
+
+            conn.Open();
+            id = Convert.ToInt32(com.ExecuteScalar().ToString());
+            conn.Close();
+
+            return id;
+        }
+
         #endregion
 
     }

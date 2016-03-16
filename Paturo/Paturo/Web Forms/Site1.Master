@@ -14,6 +14,9 @@
         .auto-style2 {
             text-align: right;
         }
+        .auto-style3 {
+            text-align: left;
+        }
     </style>
 </head>
 <body>
@@ -22,10 +25,17 @@
         <table class="auto-style1">
             <tr>
                 <td class="auto-style2">
-                    &nbsp;<asp:Label ID="usernameLbl" runat="server"></asp:Label>
+                    <table class="auto-style1">
+                        <tr>
+                            <td class="auto-style3">
+                                <asp:Button ID="accountSettingsBtn" runat="server" OnClick="accountSettingsBtn_Click" Text="Account Settings" />
+                            </td>
+                            <td>&nbsp;<asp:Label ID="usernameLbl" runat="server"></asp:Label>
                     <asp:Button ID="LogOutBtn" runat="server" OnClick="LogOutBtn_Click" Text="Log Out" />
                     <asp:Button ID="LogInBtn" runat="server" Text="Log In" OnClick="LogInBtn_Click" />
-                    <br />
+                            </td>
+                        </tr>
+                    </table>
                 </td>
             </tr>
             <tr>

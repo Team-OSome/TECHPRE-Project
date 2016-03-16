@@ -17,13 +17,15 @@ namespace Paturo.Web_Forms
                 LogInBtn.Visible = false;
                 LogOutBtn.Visible = true;
                 usernameLbl.Visible = true;
-                usernameLbl.Text = "Welcome " + Session["account"].ToString() + "!"; 
+                usernameLbl.Text = "Welcome " + Session["account"].ToString() + "!";
+                accountSettingsBtn.Visible = true;
             }
             else
             {
                 LogInBtn.Visible = true;
                 LogOutBtn.Visible = false;
                 usernameLbl.Visible = false;
+                accountSettingsBtn.Visible = false;
             }
 
         }
@@ -37,6 +39,11 @@ namespace Paturo.Web_Forms
         {
             Session["account"] = null;
             Response.Redirect("HomePage.aspx");
+        }
+
+        protected void accountSettingsBtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("AccountSettings.aspx");
         }
     }
 }
