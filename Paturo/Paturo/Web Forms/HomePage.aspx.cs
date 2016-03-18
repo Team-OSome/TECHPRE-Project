@@ -9,7 +9,7 @@ namespace Paturo.Web_Forms
 {
     public partial class HomePage : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
+        protected void Page_Load(object sender, ImageClickEventArgs e)
         {
             if (Session["category"] == null)
             {
@@ -17,52 +17,55 @@ namespace Paturo.Web_Forms
             }
         }
 
-        protected void LanguageBtn_Click(object sender, EventArgs e)
+        protected void LanguageBtn_Click(object sender, ImageClickEventArgs e)
         {
             Session["category"] = "Language";    //need a SQL function to that will return the id of the vategory based on the category name.
             Response.Redirect("SearchPage.aspx");
         }
 
-        protected void MathBtn_Click(object sender, EventArgs e)
+        protected void MathBtn_Click(object sender, ImageClickEventArgs e)
         {
             Session["category"] = "Math";
             Response.Redirect("SearchPage.aspx");
         }
 
-        protected void ScienceBtn_Click(object sender, EventArgs e)
+        protected void ScienceBtn_Click(object sender, ImageClickEventArgs e)
         {
             Session["category"] = "Science";
             Response.Redirect("SearchPage.aspx");
         }
 
-        protected void ComputerBtn_Click(object sender, EventArgs e)
+        protected void ComputerBtn_Click(object sender, ImageClickEventArgs e)
         {
             Session["category"] = "Computer";
             Response.Redirect("SearchPage.aspx");
         }
 
-        protected void ArtBtn_Click(object sender, EventArgs e)
+        protected void ArtBtn_Click(object sender, ImageClickEventArgs e)
         {
             Session["category"] = "Art";
             Response.Redirect("SearchPage.aspx");
         }
 
-        protected void MusicBtn_Click(object sender, EventArgs e)
+        protected void MusicBtn_Click(object sender, ImageClickEventArgs e)
         {
             Session["category"] = "Music";
             Response.Redirect("SearchPage.aspx");
         }
 
-        protected void SportBtn_Click(object sender, EventArgs e)
+        protected void SportBtn_Click(object sender, ImageClickEventArgs e)
         {
             Session["category"] = "Sport";
             Response.Redirect("SearchPage.aspx");
         }
 
-        protected void OthersBtn_Click(object sender, EventArgs e)
+        protected void OthersBtn_Click(object sender, ImageClickEventArgs e)
         {
             Session["category"] = "Others";
             Response.Redirect("SearchPage.aspx");
         }
+
+
+
     }
 }

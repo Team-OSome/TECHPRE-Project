@@ -130,22 +130,40 @@ namespace Paturo.Web_Forms {
         protected global::System.Web.UI.WebControls.TextBox cityTxtBox;
         
         /// <summary>
-        /// startingTimeTxtBox control.
+        /// startingTimeTxtBox1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox startingTimeTxtBox;
+        protected global::System.Web.UI.WebControls.TextBox startingTimeTxtBox1;
         
         /// <summary>
-        /// EndTimeTxtBox control.
+        /// startingTimeTxtBox2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox EndTimeTxtBox;
+        protected global::System.Web.UI.WebControls.TextBox startingTimeTxtBox2;
+        
+        /// <summary>
+        /// EndTimeTxtBox1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox EndTimeTxtBox1;
+        
+        /// <summary>
+        /// EndTimeTxtBox2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox EndTimeTxtBox2;
         
         /// <summary>
         /// zipTxtBox control.

@@ -25,22 +25,22 @@ namespace Paturo.Web_Forms
 
             try
             {
-                if (availabilityCheckBox.Items.Count > 0)
+                if (availabilityCheckBox.Items.Cast<ListItem>().Any(item => item.Selected))
                 {
                     foreach (ListItem listDay in availabilityCheckBox.Items)
                         if (listDay.Selected)
                             availability += listDay.Value + "-";
 
                     if (pM.addPreference(Session["account"].ToString(), categoryDropDownList.SelectedItem.Value.ToString(), subjectTxtBox.Text, descTxtBox.Text, targetTxtBox.Text, priceTxtBox.Text))
-                        if (sM.addSchedule(availability, startingTimeTxtBox.Text + " " + EndTimeTxtBox.Text))
-                            ScriptManager.RegisterStartupScript(this, GetType(), "ServerControlScript", "Schedule added!", true);
+                        if (sM.addSchedule(availability, startingTimeTxtBox1.Text + ":" + startingTimeTxtBox2.Text + "-" + EndTimeTxtBox1.Text + ":" + EndTimeTxtBox2.Text))
+                           Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", "<script>alert('Schedule added!');</script>");
                 }
                 else
-                    ScriptManager.RegisterStartupScript(this, GetType(), "ServerControlScript", "Please select an available day", true);
+                    Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", "<script>alert('Please select an available day');</script>");
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this, GetType(),"ServerControlScript", "Error adding schedule", true);
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", "<script>alert('Error adding schedule');</script>");
             }
         }
     }

@@ -66,6 +66,10 @@
         .auto-style33 {}
         .newStyle1 {
             font-family: Arial;
+            font-weight: 700;
+        }
+        .auto-style34 {
+            font-size: large;
         }
     </style>
 </asp:Content>
@@ -83,12 +87,12 @@
         <tr>
             <td class="auto-style4">&nbsp;</td>
             <td class="newStyle1">
-                <h3>Personal Information</h3>
+                <h3><strong>Personal Information</strong></h3>
             </td>
             <td class="newStyle1">&nbsp;</td>
             <td class="newStyle1">&nbsp;</td>
             <td class="newStyle1">
-                <h3>Teaching Information</h3>
+                <h3><strong>Teaching Information</strong></h3>
             </td>
             <td class="newStyle1">&nbsp;</td>
             <td class="auto-style5">&nbsp;</td>
@@ -207,9 +211,14 @@
             <td class="newStyle1">Time Schedule<h6>(Must be mm/dd and 24HR Time) </h6>
             </td>
             <td class="newStyle1">
-                <asp:TextBox ID="startingTimeTxtBox" runat="server" Width="83px"></asp:TextBox>
-&nbsp;-
-                <asp:TextBox ID="EndTimeTxtBox" runat="server" Width="83px"></asp:TextBox>
+                FROM:
+                <asp:TextBox ID="startingTimeTxtBox1" runat="server" Width="30px" MaxLength="2"></asp:TextBox>
+                <span class="auto-style34">&nbsp;: </span>
+                <asp:TextBox ID="startingTimeTxtBox2" runat="server" Width="30px" MaxLength="2"></asp:TextBox>
+                &nbsp;<br />
+                TO:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:TextBox ID="EndTimeTxtBox1" runat="server" Width="30px"></asp:TextBox>
+                <span class="auto-style34">&nbsp;: </span>
+                <asp:TextBox ID="EndTimeTxtBox2" runat="server" Width="30px"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
         </tr>
@@ -248,12 +257,12 @@
             <td class="auto-style3">&nbsp;</td>
             <td class="newStyle1">&nbsp;</td>
             <td class="newStyle1">
-                <asp:Button ID="updatePIBtn" runat="server" Text="Update Personal Information" />
+                <asp:Button ID="updatePIBtn" runat="server" Text="Update Personal Information" BorderStyle="None" CssClass="btn btn-success" />
             </td>
             <td class="newStyle1">&nbsp;</td>
             <td class="newStyle1">&nbsp;</td>
             <td class="newStyle1">
-                <asp:Button ID="addSchedBtn" runat="server" OnClick="addSchedBtn_Click" Text="Add Schedule" Width="191px" />
+                <asp:Button ID="addSchedBtn" runat="server" OnClick="addSchedBtn_Click" Text="Add Schedule" Width="191px" CssClass="btn btn-success" />
             </td>
             <td>&nbsp;</td>
         </tr>

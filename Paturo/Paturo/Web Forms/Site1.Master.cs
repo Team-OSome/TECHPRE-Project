@@ -11,7 +11,7 @@ namespace Paturo.Web_Forms
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            /*
             if(Session["account"] != null)
             {
                 LogInBtn.Visible = false;
@@ -27,9 +27,10 @@ namespace Paturo.Web_Forms
                 usernameLbl.Visible = false;
                 accountSettingsBtn.Visible = false;
             }
+             * */
 
         }
-
+        /*
         protected void LogInBtn_Click(object sender, EventArgs e)
         {
             Response.Redirect("LogIn.aspx");
@@ -44,6 +45,12 @@ namespace Paturo.Web_Forms
         protected void accountSettingsBtn_Click(object sender, EventArgs e)
         {
             Response.Redirect("AccountSettings.aspx");
+        }
+        */
+
+        protected void SearchButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("HomePage.aspx");
         }
     }
 }

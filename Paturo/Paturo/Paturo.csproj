@@ -170,6 +170,14 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Icons\artImg.png" />
+    <Content Include="Icons\computerImg.png" />
+    <Content Include="Icons\languageImg.png" />
+    <Content Include="Icons\mathImg.png" />
+    <Content Include="Icons\musicImg.png" />
+    <Content Include="Icons\othersImg.png" />
+    <Content Include="Icons\scienceImg.png" />
+    <Content Include="Icons\sportsImg.png" />
     <Content Include="packages.config" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />

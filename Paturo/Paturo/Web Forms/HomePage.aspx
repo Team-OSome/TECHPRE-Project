@@ -6,6 +6,17 @@
         }
         .auto-style5 {
             width: 200px;
+        text-align: center;
+        font-weight: 700;
+    }
+        .auto-style6 {
+            height: 20px;
+        }
+        .auto-style7 {
+            width: 200px;
+            text-align: center;
+            font-weight: 700;
+            height: 20px;
         }
     </style>
 </asp:Content>
@@ -22,49 +33,81 @@
         <tr>
             <td>&nbsp;</td>
             <td class="auto-style4" colspan="4">
-                <asp:TextBox ID="searchTB" runat="server" Width="450px"></asp:TextBox>
-                <asp:Button ID="searchBtn" runat="server" Text="Search" />
-            </td>
+                &nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td>&nbsp;</td>
-            <td class="auto-style5">&nbsp;</td>
-            <td class="auto-style5">&nbsp;</td>
-            <td class="auto-style5">&nbsp;</td>
-            <td class="auto-style5">&nbsp;</td>
+            <td class="auto-style4" colspan="4">
+                &nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td class="auto-style4" colspan="4">
+                <asp:TextBox ID="searchTB" runat="server" Width="450px" Height="21px"></asp:TextBox>
+                <asp:Button ID="searchBtn" runat="server" Text="Search" CssClass="btn btn-success" />
+            </td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style6"></td>
+            <td class="auto-style7"></td>
+            <td class="auto-style7"></td>
+            <td class="auto-style7"></td>
+            <td class="auto-style7"></td>
+            <td class="auto-style6"></td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td class="auto-style5">
+                <asp:ImageButton ID="LanguageBtn" runat="server" ImageUrl="~/Icons/languageImg.png" OnClick="LanguageBtn_Click" />
+                <br />
+                Language</td>
+            <td class="auto-style5">
+                <asp:ImageButton ID="MathBtn" runat="server" ImageUrl="~/Icons/mathImg.png" OnClick="MathBtn_Click" />
+                <br />
+                Math</td>
+            <td class="auto-style5">
+                <asp:ImageButton ID="ScienceBtn" runat="server" ImageUrl="~/Icons/scienceImg.png" OnClick="ScienceBtn_Click" />
+                <br />
+                Science</td>
+            <td class="auto-style5">
+                <asp:ImageButton ID="ComputerBtn" runat="server" ImageUrl="~/Icons/computerImg.png" OnClick="ComputerBtn_Click" />
+                <br />
+                Technology</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td>&nbsp;</td>
             <td class="auto-style5">
-                <asp:Button ID="LanguageBtn" runat="server" Text="Language" OnClick="LanguageBtn_Click" />
-            </td>
+                &nbsp;</td>
             <td class="auto-style5">
-                <asp:Button ID="MathBtn" runat="server" Text="Math" OnClick="MathBtn_Click" />
-            </td>
+                &nbsp;</td>
             <td class="auto-style5">
-                <asp:Button ID="ScienceBtn" runat="server" Text="Science" OnClick="ScienceBtn_Click" />
-            </td>
+                &nbsp;</td>
             <td class="auto-style5">
-                <asp:Button ID="ComputerBtn" runat="server" Text="Computer" OnClick="ComputerBtn_Click" />
-            </td>
+                &nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td>&nbsp;</td>
             <td class="auto-style5">
-                <asp:Button ID="ArtBtn" runat="server" Text="Art" OnClick="ArtBtn_Click" />
-            </td>
+                <asp:ImageButton ID="ArtBtn" runat="server" ImageUrl="~/Icons/artImg.png" OnClick="ArtBtn_Click" />
+                <br />
+                Arts</td>
             <td class="auto-style5">
-                <asp:Button ID="MusicBtn" runat="server" Text="Music" OnClick="MusicBtn_Click" />
-            </td>
+                <asp:ImageButton ID="MusicBtn" runat="server" ImageUrl="~/Icons/musicImg.png" OnClick="MusicBtn_Click" />
+                <br />
+                Music</td>
             <td class="auto-style5">
-                <asp:Button ID="SportBtn" runat="server" Text="Sport" OnClick="SportBtn_Click" />
-            </td>
+                <asp:ImageButton ID="SportBtn" runat="server" ImageUrl="~/Icons/sportsImg.png" OnClick="SportBtn_Click" />
+                <br />
+                Sports</td>
             <td class="auto-style5">
-                <asp:Button ID="OthersBtn" runat="server" Text="Others" OnClick="OthersBtn_Click" />
-            </td>
+                <asp:ImageButton ID="OthersBtn" runat="server" ImageUrl="~/Icons/othersImg.png" OnClick="OthersBtn_Click" />
+                <br />
+                Others</td>
             <td>&nbsp;</td>
         </tr>
         <tr>

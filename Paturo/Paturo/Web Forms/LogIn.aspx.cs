@@ -15,11 +15,6 @@ namespace Paturo.Web_Forms
 
         }
 
-        protected void RegisterBtn_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("Register.aspx");
-        }
-
         protected void LogInBtn_Click(object sender, EventArgs e)
         {
             AccountManager am = new AccountManager();
@@ -31,9 +26,14 @@ namespace Paturo.Web_Forms
             }
             else
             {
-                statusLbl.Text = "log in not correct";
+                statusLbl.Text = "Log-in Incorrect";
             }
 
+        }
+
+        protected void RegisterSB_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Register.aspx");
         }
     }
 }

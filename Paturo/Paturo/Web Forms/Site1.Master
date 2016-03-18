@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Paturo.Web_Forms.Site1" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Paturo.Web_Forms.Site1"%>
 
 <!DOCTYPE html>
 
@@ -14,40 +14,70 @@
         .auto-style2 {
             text-align: right;
         }
-        .auto-style3 {
-            text-align: left;
+        .auto-style4 {
+            height: 20px;
         }
     </style>
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <environment names="Development">
+            <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+            <link rel="stylesheet" href="~/css/site.css" />
+        </environment>
+        <environment names="Staging,Production">
+            <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/css/bootstrap.min.css"
+                  asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+                  asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+            <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+        </environment>
+
 </head>
 <body>
     <form id="form1" runat="server">
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand"">Paturo</a>
+        </div>
+        <center>
+            <div class="navbar-collapse collapse" id="navbar-main">
+                <ul class="nav navbar-nav">
+                    <li><a href="HomePage.aspx">Home</a>
+                    </li>
+                    <li><a href="SearchPage.aspx">Search</a>
+                    </li>
+                    <li><a href="AccountSettings.aspx">Account Settings</a>
+                    </li>
+                </ul>
+            </div>
+        </center>
+        </div>
+    </div>
+
     <div>
         <table class="auto-style1">
             <tr>
                 <td class="auto-style2">
-                    <table class="auto-style1">
-                        <tr>
-                            <td class="auto-style3">
-                                <asp:Button ID="accountSettingsBtn" runat="server" OnClick="accountSettingsBtn_Click" Text="Account Settings" />
-                            </td>
-                            <td>&nbsp;<asp:Label ID="usernameLbl" runat="server"></asp:Label>
-                    <asp:Button ID="LogOutBtn" runat="server" OnClick="LogOutBtn_Click" Text="Log Out" />
-                    <asp:Button ID="LogInBtn" runat="server" Text="Log In" OnClick="LogInBtn_Click" />
-                            </td>
-                        </tr>
-                    </table>
-                </td>
+                    &nbsp;</td>
             </tr>
             <tr>
-                <td>
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server">
-        
-        </asp:ContentPlaceHolder>
+                <td class="auto-style4">
                 </td>
             </tr>
         </table>
     </div>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [PERSONAL_INFO]"></asp:SqlDataSource>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server">
+        
+        </asp:ContentPlaceHolder>
     </form>
 </body>
 </html>
