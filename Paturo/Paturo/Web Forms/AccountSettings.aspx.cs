@@ -25,17 +25,22 @@ namespace Paturo.Web_Forms
 
             try
             {
-                foreach (ListItem listDay in availabilityCheckBox.Items)
-                    if (listDay.Selected)
-                        availability += listDay.Value + "-";
+                if (availabilityCheckBox.Items.Count > 0)
+                {
+                    foreach (ListItem listDay in availabilityCheckBox.Items)
+                        if (listDay.Selected)
+                            availability += listDay.Value + "-";
 
-                if (pM.addPreference(Session["account"].ToString(), categoryDropDownList.SelectedItem.Value.ToString(), subjectTxtBox.Text, descTxtBox.Text, targetTxtBox.Text, priceTxtBox.Text))
-                    if(sM.addSchedule(availability, startingTimeTxtBox.Text + " " + EndTimeTxtBox.Text))
-                        MessageBox.Show("Schedule Added!");
+                    if (pM.addPreference(Session["account"].ToString(), categoryDropDownList.SelectedItem.Value.ToString(), subjectTxtBox.Text, descTxtBox.Text, targetTxtBox.Text, priceTxtBox.Text))
+                        if (sM.addSchedule(availability, startingTimeTxtBox.Text + " " + EndTimeTxtBox.Text))
+                            ScriptManager.RegisterStartupScript(this, GetType(), "ServerControlScript", "Schedule added!", true);
+                }
+                else
+                    ScriptManager.RegisterStartupScript(this, GetType(), "ServerControlScript", "Please select an available day", true);
             }
             catch
             {
-                MessageBox.Show("Error Adding Schedule!");
+                ScriptManager.RegisterStartupScript(this, GetType(),"ServerControlScript", "Error adding schedule", true);
             }
         }
     }
