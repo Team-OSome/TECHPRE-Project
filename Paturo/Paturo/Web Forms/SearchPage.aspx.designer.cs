@@ -76,6 +76,15 @@ namespace Paturo.Web_Forms {
         protected global::System.Web.UI.WebControls.Button cancelBtn;
         
         /// <summary>
+        /// searchGridView control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView searchGridView;
+        
+        /// <summary>
         /// categoryDS control.
         /// </summary>
         /// <remarks>
@@ -92,14 +101,5 @@ namespace Paturo.Web_Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.SqlDataSource listDS;
-        
-        /// <summary>
-        /// searchGridView control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView searchGridView;
     }
 }

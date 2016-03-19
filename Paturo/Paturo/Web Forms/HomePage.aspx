@@ -18,6 +18,14 @@
             font-weight: 700;
             height: 20px;
         }
+        .newStyle1 {
+            font-family: Arial;
+        }
+        .auto-style9 {
+            font-family: Arial;
+            font-weight: bold;
+            text-align: center;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder" runat="server">
@@ -46,7 +54,7 @@
             <td>&nbsp;</td>
             <td class="auto-style4" colspan="4">
                 <asp:TextBox ID="searchTB" runat="server" Width="450px" Height="21px"></asp:TextBox>
-                <asp:Button ID="searchBtn" runat="server" Text="Search" CssClass="btn btn-success" />
+                <asp:Button ID="searchBtn" runat="server" Text="Search" CssClass="btn btn-success" OnClick="searchBtn_Click" />
             </td>
             <td>&nbsp;</td>
         </tr>
@@ -60,19 +68,19 @@
         </tr>
         <tr>
             <td>&nbsp;</td>
-            <td class="auto-style5">
+            <td class="auto-style9">
                 <asp:ImageButton ID="LanguageBtn" runat="server" ImageUrl="~/Icons/languageImg.png" OnClick="LanguageBtn_Click" />
                 <br />
                 Language</td>
-            <td class="auto-style5">
+            <td class="auto-style9">
                 <asp:ImageButton ID="MathBtn" runat="server" ImageUrl="~/Icons/mathImg.png" OnClick="MathBtn_Click" />
                 <br />
                 Math</td>
-            <td class="auto-style5">
+            <td class="auto-style9">
                 <asp:ImageButton ID="ScienceBtn" runat="server" ImageUrl="~/Icons/scienceImg.png" OnClick="ScienceBtn_Click" />
                 <br />
                 Science</td>
-            <td class="auto-style5">
+            <td class="auto-style9">
                 <asp:ImageButton ID="ComputerBtn" runat="server" ImageUrl="~/Icons/computerImg.png" OnClick="ComputerBtn_Click" />
                 <br />
                 Technology</td>
@@ -80,31 +88,31 @@
         </tr>
         <tr>
             <td>&nbsp;</td>
-            <td class="auto-style5">
+            <td class="auto-style9">
                 &nbsp;</td>
-            <td class="auto-style5">
+            <td class="auto-style9">
                 &nbsp;</td>
-            <td class="auto-style5">
+            <td class="auto-style9">
                 &nbsp;</td>
-            <td class="auto-style5">
+            <td class="auto-style9">
                 &nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td>&nbsp;</td>
-            <td class="auto-style5">
+            <td class="auto-style9">
                 <asp:ImageButton ID="ArtBtn" runat="server" ImageUrl="~/Icons/artImg.png" OnClick="ArtBtn_Click" />
                 <br />
                 Arts</td>
-            <td class="auto-style5">
+            <td class="auto-style9">
                 <asp:ImageButton ID="MusicBtn" runat="server" ImageUrl="~/Icons/musicImg.png" OnClick="MusicBtn_Click" />
                 <br />
                 Music</td>
-            <td class="auto-style5">
+            <td class="auto-style9">
                 <asp:ImageButton ID="SportBtn" runat="server" ImageUrl="~/Icons/sportsImg.png" OnClick="SportBtn_Click" />
                 <br />
                 Sports</td>
-            <td class="auto-style5">
+            <td class="auto-style9">
                 <asp:ImageButton ID="OthersBtn" runat="server" ImageUrl="~/Icons/othersImg.png" OnClick="OthersBtn_Click" />
                 <br />
                 Others</td>

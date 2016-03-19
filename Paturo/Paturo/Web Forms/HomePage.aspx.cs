@@ -65,6 +65,11 @@ namespace Paturo.Web_Forms
             Response.Redirect("SearchPage.aspx");
         }
 
+        protected void searchBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
 
     }

@@ -3,18 +3,25 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
         .auto-style3 {
-            width: 200px;
             height: 298px;
         }
         .auto-style4 {
             width: 500px;
             text-align: center;
         }
-        .auto-style5 {
-            margin-top: 0px;
-        }
         .auto-style6 {
             height: 298px;
+            text-align: left;
+        }
+        .auto-style7 {
+            width: 567px;
+            text-align: center;
+            height: 20px;
+        }
+        .auto-style8 {
+            font-size: large;
+        }
+        .auto-style9 {
             text-align: center;
         }
     </style>
@@ -23,31 +30,88 @@
     <br />
     <table class="auto-style1">
         <tr>
-            <td>&nbsp;</td>
-            <td class="auto-style4">
-                <asp:TextBox ID="searchTB" runat="server"></asp:TextBox>
-                <asp:Button ID="searchBtn" runat="server" Text="Search" OnClick="searchBtn_Click" />
-            </td>
+            <td class="auto-style9">&nbsp;</td>
+            <td class="auto-style7">
+                &nbsp;</td>
             <td>&nbsp;</td>
         </tr>
+        <tr>
+            <td class="auto-style9">&nbsp;</td>
+            <td class="auto-style7">
+                &nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style9" colspan="3">
+                <asp:TextBox ID="searchTB" runat="server" Height="21px" Width="450px"></asp:TextBox>
+                <asp:Button ID="searchBtn" runat="server" Text="Search" OnClick="searchBtn_Click" CssClass="btn btn-success" />
+            </td>
+        </tr>
+        <tr>
+            <td class="auto-style9">&nbsp;</td>
+            <td class="auto-style7">
+                &nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan="3"><strong>&nbsp;&nbsp; <span class="auto-style8">Category</span>:</strong>
+                <asp:Label ID="categoryLbl" runat="server" CssClass="auto-style8"></asp:Label>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Button ID="changeBtn" runat="server" CssClass="btn btn-success" OnClick="changeBtn_Click" Text="change" />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:DropDownList ID="categoryDDL" runat="server" DataSourceID="categoryDS" DataTextField="category_name" DataValueField="category_name" Height="30px">
+                </asp:DropDownList>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Button ID="selectBtn" runat="server" Text="Select" OnClick="selectBtn_Click" CssClass="btn btn-success" />
+                &nbsp;&nbsp;&nbsp;
+                <asp:Button ID="cancelBtn" runat="server" Text="Cancel" CssClass="btn btn-success" />
+                </td>
+        </tr>
     </table>
-    <br />
-    <br />
     <table class="auto-style1">
         <tr>
-            <td class="auto-style3">Category:<br />
-                <asp:Label ID="categoryLbl" runat="server"></asp:Label>
-                <asp:Button ID="changeBtn" runat="server" CssClass="auto-style5" OnClick="changeBtn_Click" Text="change" />
-                <asp:DropDownList ID="categoryDDL" runat="server" DataSourceID="categoryDS" DataTextField="category_name" DataValueField="category_name">
-                </asp:DropDownList>
-                <br />
-                <asp:Button ID="selectBtn" runat="server" Text="Select" OnClick="selectBtn_Click" />
-                <asp:Button ID="cancelBtn" runat="server" Text="Cancel" />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
+            <td class="auto-style3" colspan="2">
+                <asp:GridView ID="searchGridView" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="pref_id" DataSourceID="listDS" ForeColor="#333333" GridLines="None" Width="852px" HorizontalAlign="Center">
+                    <AlternatingRowStyle BackColor="White" ForeColor="#284775" HorizontalAlign="Left" />
+                    <Columns>
+                        <asp:BoundField DataField="subject" HeaderText="Subject" SortExpression="subject"  ItemStyle-HorizontalAlign="Center" >
+                        <HeaderStyle HorizontalAlign="Center" />
+<ItemStyle HorizontalAlign="Center"></ItemStyle>
+                        </asp:BoundField>
+                        <asp:BoundField DataField="category" HeaderText="Category" SortExpression="category"  ItemStyle-HorizontalAlign="Center" >
+                        <HeaderStyle HorizontalAlign="Center" />
+<ItemStyle HorizontalAlign="Center"></ItemStyle>
+                        </asp:BoundField>
+                        <asp:BoundField DataField="description" HeaderText="Description" SortExpression="description"  ItemStyle-HorizontalAlign="Center" >
+                        <HeaderStyle HorizontalAlign="Center" />
+<ItemStyle HorizontalAlign="Center"></ItemStyle>
+                        </asp:BoundField>
+                        <asp:BoundField DataField="target_students" HeaderText="Target Students" SortExpression="target_students"  ItemStyle-HorizontalAlign="Center" >
+                        <HeaderStyle HorizontalAlign="Center" />
+<ItemStyle HorizontalAlign="Center"></ItemStyle>
+                        </asp:BoundField>
+                        <asp:BoundField DataField="price_info" HeaderText="Price Info" SortExpression="price_info"  ItemStyle-HorizontalAlign="Center" >
+                        <HeaderStyle HorizontalAlign="Center" />
+<ItemStyle HorizontalAlign="Center"></ItemStyle>
+                        </asp:BoundField>
+                        <asp:ButtonField ButtonType="Button" Text="Open" CommandName="openBtn" />
+                    </Columns>
+                    <EditRowStyle BackColor="#999999" HorizontalAlign="Left" />
+                    <EmptyDataRowStyle HorizontalAlign="Left" />
+                    <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" HorizontalAlign="Left" />
+                    <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" HorizontalAlign="Left" Wrap="True" />
+                    <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+                    <RowStyle BackColor="#F7F6F3" ForeColor="#333333" HorizontalAlign="Left" />
+                    <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" HorizontalAlign="Left" />
+                    <SortedAscendingCellStyle BackColor="#E9E7E2" HorizontalAlign="Left" />
+                    <SortedAscendingHeaderStyle BackColor="#506C8C" HorizontalAlign="Left" />
+                    <SortedDescendingCellStyle BackColor="#FFFDF8" HorizontalAlign="Left" />
+                    <SortedDescendingHeaderStyle BackColor="#6F8DAE" HorizontalAlign="Left" />
+                </asp:GridView>
+            </td>
+        </tr>
+        <tr>
+            <td class="auto-style3">
                 <asp:SqlDataSource ID="categoryDS" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [category_name] FROM [A.CATEGORY]"></asp:SqlDataSource>
                 <asp:SqlDataSource ID="listDS" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [T.PREFERENCES] WHERE ([category] = @category)">
                     <SelectParameters>
@@ -56,30 +120,7 @@
                 </asp:SqlDataSource>
             </td>
             <td class="auto-style6">
-                <asp:GridView ID="searchGridView" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="pref_id" DataSourceID="listDS" ForeColor="#333333" GridLines="None" Width="852px">
-                    <AlternatingRowStyle BackColor="White" />
-                    <Columns>
-                        <asp:CommandField ShowSelectButton="True" />
-                        <asp:BoundField DataField="subject" HeaderText="subject" SortExpression="subject" />
-                        <asp:BoundField DataField="category" HeaderText="category" SortExpression="category" />
-                        <asp:BoundField DataField="description" HeaderText="description" SortExpression="description" />
-                        <asp:BoundField DataField="target_students" HeaderText="target_students" SortExpression="target_students" />
-                        <asp:BoundField DataField="price_info" HeaderText="price_info" SortExpression="price_info" />
-                        <asp:ButtonField ButtonType="Button" Text="Open" CommandName="openBtn" />
-                    </Columns>
-                    <EditRowStyle BackColor="#2461BF" />
-                    <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-                    <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-                    <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
-                    <RowStyle BackColor="#EFF3FB" />
-                    <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                    <SortedAscendingCellStyle BackColor="#F5F7FB" />
-                    <SortedAscendingHeaderStyle BackColor="#6D95E1" />
-                    <SortedDescendingCellStyle BackColor="#E9EBEF" />
-                    <SortedDescendingHeaderStyle BackColor="#4870BE" />
-                </asp:GridView>
-                <br />
-            </td>
+                &nbsp;</td>
         </tr>
     </table>
 </asp:Content>
