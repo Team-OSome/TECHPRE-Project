@@ -43,6 +43,61 @@ namespace Paturo.lib
             }
         }
 
+        public String getSelectedDay(String pref_id)
+        {
+            String day = "";
+            try
+            {
+                string query;
+
+                SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+                conn.Open();
+
+                query = "select day from [T.P.SCHEDULE] where pref_id = '" + pref_id +"' ";
+                SqlCommand com = new SqlCommand(query, conn);
+                day = com.ExecuteScalar().ToString();
+
+                
+
+                /*
+                query = "select time from [T.P.SCHEDULE] where pref_id = '" + pref_id + "' ";
+                com = new SqlCommand(query, conn);
+                time = com.ExecuteScalar().ToString();    
+                */
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            return day;           
+        }
+
+        public String getSelectedTime(String pref_id)
+        {
+            String time = "";
+            try
+            {
+                string query;
+
+                SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+                conn.Open();
+
+                query = "select time from [T.P.SCHEDULE] where pref_id = '" + pref_id + "' ";
+                SqlCommand com = new SqlCommand(query, conn);
+                time = com.ExecuteScalar().ToString();    
+
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            return time;
+        }
+
     }
 
 }

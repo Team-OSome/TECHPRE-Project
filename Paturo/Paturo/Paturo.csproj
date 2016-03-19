@@ -220,6 +220,7 @@
     <Content Include="Web Forms\LogIn.aspx" />
     <Content Include="Web Forms\Register.aspx" />
     <Content Include="Web Forms\SearchPage.aspx" />
+    <Content Include="Web Forms\ViewSchedule.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <None Include="Project_Readme.html" />
@@ -400,6 +401,13 @@
     </Compile>
     <Compile Include="Web Forms\Site1.Master.designer.cs">
       <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Web Forms\ViewSchedule.aspx.cs">
+      <DependentUpon>ViewSchedule.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web Forms\ViewSchedule.aspx.designer.cs">
+      <DependentUpon>ViewSchedule.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup />

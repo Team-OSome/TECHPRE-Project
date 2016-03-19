@@ -177,6 +177,118 @@ namespace Paturo.Libs
 
         #endregion
 
+        #region Other Account Info Getters
+        public String getOtherLastName(String id)
+        {
+            try
+            {
+                string insertQuery = "select last_name from PERSONAL_INFO where id = @id";
+
+                SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+                SqlCommand com = new SqlCommand(insertQuery, conn);
+                com.Parameters.AddWithValue("@id", id);
+
+                conn.Open();
+                String value = com.ExecuteScalar().ToString();
+                conn.Close();
+
+                return value;
+            }
+            catch
+            {
+                return "ERROR";
+            }
+        }
+
+        public String getOtherFirstName(String id)
+        {
+            try
+            {
+                string insertQuery = "select first_name from PERSONAL_INFO where id = @id";
+
+                SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+                SqlCommand com = new SqlCommand(insertQuery, conn);
+                com.Parameters.AddWithValue("@id", id);
+
+                conn.Open();
+                String value = com.ExecuteScalar().ToString();
+                conn.Close();
+
+                return value;
+            }
+            catch
+            {
+                return "ERROR";
+            }
+        }
+
+        public String getOtherMiddleName(String id)
+        {
+            try
+            {
+                string insertQuery = "select middle_name from PERSONAL_INFO where id = @id";
+
+                SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+                SqlCommand com = new SqlCommand(insertQuery, conn);
+                com.Parameters.AddWithValue("@id", id);
+
+                conn.Open();
+                String value = com.ExecuteScalar().ToString();
+                conn.Close();
+
+                return value;
+            }
+            catch
+            {
+                return "ERROR";
+            }
+        }
+
+        public String getOtherContactNumber(String id)
+        {
+            try
+            {
+                string insertQuery = "select contact_num from PERSONAL_INFO where id = @id";
+
+                SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+                SqlCommand com = new SqlCommand(insertQuery, conn);
+                com.Parameters.AddWithValue("@id", id);
+
+                conn.Open();
+                String value = com.ExecuteScalar().ToString();
+                conn.Close();
+
+                return value;
+            }
+            catch
+            {
+                return "ERROR";
+            }
+        }
+
+        public String getOtherCity(String id)
+        {
+            try
+            { 
+                string insertQuery = "select contact_num from PERSONAL_INFO where id = @id";
+
+                SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+                SqlCommand com = new SqlCommand(insertQuery, conn);
+                com.Parameters.AddWithValue("@id", id);
+
+                conn.Open();
+                String value = com.ExecuteScalar().ToString();
+                conn.Close();
+
+                return value;
+            }
+            catch
+            {
+                return "ERROR";
+            }
+        }
+        #endregion
+
     }
 
 }

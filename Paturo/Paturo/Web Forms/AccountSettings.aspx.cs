@@ -31,6 +31,8 @@ namespace Paturo.Web_Forms
                         if (listDay.Selected)
                             availability += listDay.Value + "-";
 
+                    availability = availability.Remove(availability.Length - 1);
+
                     if (pM.addPreference(Session["account"].ToString(), categoryDropDownList.SelectedItem.Value.ToString(), subjectTxtBox.Text, descTxtBox.Text, targetTxtBox.Text, priceTxtBox.Text))
                         if (sM.addSchedule(availability, startingTimeTxtBox1.Text + ":" + startingTimeTxtBox2.Text + "-" + EndTimeTxtBox1.Text + ":" + EndTimeTxtBox2.Text))
                            Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", "<script>alert('Schedule added!');</script>");

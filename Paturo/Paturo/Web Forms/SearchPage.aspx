@@ -72,11 +72,12 @@
     <table class="auto-style1">
         <tr>
             <td class="auto-style3" colspan="2">
-                <asp:GridView ID="searchGridView" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="pref_id" DataSourceID="listDS" ForeColor="#333333" GridLines="None" Width="852px" HorizontalAlign="Center">
+                <asp:GridView ID="searchGridView" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="pref_id" DataSourceID="listDS" ForeColor="#333333" GridLines="None" Width="852px" HorizontalAlign="Center" OnRowCommand="searchGridViewClick">
                     <AlternatingRowStyle BackColor="White" ForeColor="#284775" HorizontalAlign="Left" />
                     <Columns>
+                        <asp:BoundField DataField="id" HeaderText="id" SortExpression="id" />
+                        <asp:BoundField DataField="pref_id" HeaderText="pref_id" SortExpression="pref_id" />
                         <asp:BoundField DataField="subject" HeaderText="Subject" SortExpression="subject"  ItemStyle-HorizontalAlign="Center" >
-                        <HeaderStyle HorizontalAlign="Center" />
 <ItemStyle HorizontalAlign="Center"></ItemStyle>
                         </asp:BoundField>
                         <asp:BoundField DataField="category" HeaderText="Category" SortExpression="category"  ItemStyle-HorizontalAlign="Center" >
@@ -97,7 +98,7 @@
                         </asp:BoundField>
                         <asp:TemplateField ShowHeader="False">
                         <ItemTemplate>
-                        <asp:Button ID="openBtn" Text="Open" runat="server" OnClick="searchGridViewClick" />                   
+                        <asp:Button ID="openBtn" Text="Open" runat="server" CommandName="open" CommandArgument="<%# ((GridViewRow) Container).RowIndex %>"/>                   
                     </ItemTemplate>
                     </asp:TemplateField>        
                     </Columns>
