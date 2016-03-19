@@ -38,14 +38,9 @@
     <form id="form1" runat="server">
 
     <div class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
+    <div class="container-fluid">
         <div class="navbar-header">
-            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand"">Paturo</a>
+            <a class="navbar-brand" href="#">Paturo</a>
         </div>
         <center>
             <div class="navbar-collapse collapse" id="navbar-main">
@@ -54,7 +49,11 @@
                     </li>
                     <li><a href="SearchPage.aspx">Search</a>
                     </li>
-                    <li><a href="AccountSettings.aspx">Account Settings</a>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="AccountSettings.aspx"><span class="glyphicon glyphicon-user"></span> Account Settings</a>
+                    </li>
+                    <li><a href="LogIn.aspx"><span class="glyphicon glyphicon-log-in"></span> Log Out</a>
                     </li>
                 </ul>
             </div>

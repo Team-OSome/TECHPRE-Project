@@ -48,7 +48,8 @@
             </td>
         </tr>
         <tr>
-            <td class="auto-style9">&nbsp;</td>
+            <td class="auto-style9">
+                &nbsp;</td>
             <td class="auto-style7">
                 &nbsp;</td>
             <td>&nbsp;</td>
@@ -94,7 +95,11 @@
                         <HeaderStyle HorizontalAlign="Center" />
 <ItemStyle HorizontalAlign="Center"></ItemStyle>
                         </asp:BoundField>
-                        <asp:ButtonField ButtonType="Button" Text="Open" CommandName="openBtn" />
+                        <asp:TemplateField ShowHeader="False">
+                        <ItemTemplate>
+                        <asp:Button ID="openBtn" Text="Open" runat="server" OnClick="searchGridViewClick" />                   
+                    </ItemTemplate>
+                    </asp:TemplateField>        
                     </Columns>
                     <EditRowStyle BackColor="#999999" HorizontalAlign="Left" />
                     <EmptyDataRowStyle HorizontalAlign="Left" />

@@ -12,7 +12,7 @@ namespace Paturo.Web_Forms
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Session.Abandon();
         }
 
         protected void LogInBtn_Click(object sender, EventArgs e)

@@ -46,12 +46,20 @@ namespace Paturo.Web_Forms
 
         }
 
-        protected void searchGridView_RowCommand(object sender, GridViewCommandEventArgs e)
+        protected void searchGridViewClick(object sender, EventArgs e)
         {
-            if (e.CommandName.CompareTo("openBtn") == 0)
-            {
-                
-            }
+
+            Button btn = (Button)sender;    //Get the button that raised the event
+
+            GridViewRow gvr = (GridViewRow)btn.NamingContainer;     //Get the row that contains this button        
+
+            Session["selectedSubject"] = gvr.Cells[0].Text;
+            Session["selectedCategory"] = gvr.Cells[1].Text;
+            Session["selectedDescription"] = gvr.Cells[2].Text;
+            Session["selectedTargetStudents"] = gvr.Cells[3].Text;
+            Session["selectedPriceInfo"] = gvr.Cells[4].Text;
+
+            Response.Redirect("");
         }
     }
 }

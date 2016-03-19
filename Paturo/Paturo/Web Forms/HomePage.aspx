@@ -18,14 +18,14 @@
             font-weight: 700;
             height: 20px;
         }
-        .newStyle1 {
-            font-family: Arial;
-        }
-        .auto-style9 {
-            font-family: Arial;
-            font-weight: bold;
-            text-align: center;
-        }
+    .newStyle1 {
+        font-family: Arial;
+    }
+    .auto-style9 {
+        font-family: Arial;
+        font-weight: bold;
+        text-align: center;
+    }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder" runat="server">
