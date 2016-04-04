@@ -5,6 +5,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+
+     <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+
     <style type="text/css">
         .auto-style1 {
             width: 100%;
@@ -17,20 +22,27 @@
         }
         .auto-style4 {
             height: 23px;
+            background-color: #333333;
         }
         .auto-style5 {
             width: 299px;
             height: 23px;
+            background-color: #000000;
         }
         .auto-style6 {
             width: 300px;
             height: 23px;
+            background-color: #333333;
         }
         .auto-style7 {
             font-size: large;
         }
         .auto-style8 {
             text-align: center;
+        }
+        .auto-style9 {
+            height: 23px;
+            background-color: #353535;
         }
     </style>
 </head>
@@ -40,14 +52,32 @@
     
         <table class="auto-style1">
             <tr>
-                <td class="auto-style4"></td>
+
+                <td class="auto-style9"></td>
                 <td class="auto-style5"></td>
                 <td class="auto-style6"></td>
                 <td class="auto-style4"></td>
             </tr>
             <tr>
+
+                <td class="auto-style9">&nbsp;</td>
+                <td class="auto-style5">&nbsp;</td>
+                <td class="auto-style6">&nbsp;</td>
+                <td class="auto-style4">&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td class="auto-style7" colspan="2">&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
                 <td>&nbsp;</td>
                 <td class="auto-style7" colspan="2"><strong>Account Information</strong></td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td class="auto-style7" colspan="2">&nbsp;</td>
                 <td>&nbsp;</td>
             </tr>
             <tr>
@@ -60,10 +90,24 @@
             </tr>
             <tr>
                 <td>&nbsp;</td>
+                <td class="auto-style2">&nbsp;</td>
+                <td class="auto-style3">
+                    &nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
                 <td class="auto-style2">Password:</td>
                 <td class="auto-style3">
                     <asp:TextBox ID="passwordTB" runat="server" Width="250px"></asp:TextBox>
                 </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td class="auto-style2">&nbsp;</td>
+                <td class="auto-style3">
+                    &nbsp;</td>
                 <td>&nbsp;</td>
             </tr>
             <tr>
@@ -87,10 +131,22 @@
             </tr>
             <tr>
                 <td>&nbsp;</td>
+                <td class="auto-style7" colspan="2">&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
                 <td class="auto-style2">First Name:</td>
                 <td class="auto-style3">
                     <asp:TextBox ID="firstNameTB" runat="server" Width="250px"></asp:TextBox>
                 </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td class="auto-style2">&nbsp;</td>
+                <td class="auto-style3">
+                    &nbsp;</td>
                 <td>&nbsp;</td>
             </tr>
             <tr>
@@ -103,10 +159,24 @@
             </tr>
             <tr>
                 <td>&nbsp;</td>
+                <td class="auto-style2">&nbsp;</td>
+                <td class="auto-style3">
+                    &nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
                 <td class="auto-style2">Last Name:</td>
                 <td class="auto-style3">
                     <asp:TextBox ID="lastNameTB" runat="server" Width="250px"></asp:TextBox>
                 </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td class="auto-style2">&nbsp;</td>
+                <td class="auto-style3">
+                    &nbsp;</td>
                 <td>&nbsp;</td>
             </tr>
             <tr>
@@ -196,6 +266,13 @@
             </tr>
             <tr>
                 <td>&nbsp;</td>
+                <td class="auto-style2">&nbsp;</td>
+                <td class="auto-style3">
+                    &nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
                 <td class="auto-style2">Gender:</td>
                 <td class="auto-style3">
                     <asp:DropDownList ID="genderDDL" runat="server">
@@ -203,6 +280,13 @@
                         <asp:ListItem>Female</asp:ListItem>
                     </asp:DropDownList>
                 </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td class="auto-style2">&nbsp;</td>
+                <td class="auto-style3">
+                    &nbsp;</td>
                 <td>&nbsp;</td>
             </tr>
             <tr>
@@ -220,10 +304,24 @@
             </tr>
             <tr>
                 <td>&nbsp;</td>
+                <td class="auto-style2">&nbsp;</td>
+                <td class="auto-style3">
+                    &nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
                 <td class="auto-style2">Nationality:</td>
                 <td class="auto-style3">
                     <asp:TextBox ID="nationalityTB" runat="server" Width="250px"></asp:TextBox>
                 </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td class="auto-style2">&nbsp;</td>
+                <td class="auto-style3">
+                    &nbsp;</td>
                 <td>&nbsp;</td>
             </tr>
             <tr>
@@ -236,6 +334,13 @@
             </tr>
             <tr>
                 <td>&nbsp;</td>
+                <td class="auto-style2">&nbsp;</td>
+                <td class="auto-style3">
+                    &nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
                 <td class="auto-style2">Province:</td>
                 <td class="auto-style3">
                     <asp:TextBox ID="provinceTB" runat="server" Width="250px"></asp:TextBox>
@@ -244,10 +349,24 @@
             </tr>
             <tr>
                 <td>&nbsp;</td>
+                <td class="auto-style2">&nbsp;</td>
+                <td class="auto-style3">
+                    &nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
                 <td class="auto-style2">City:</td>
                 <td class="auto-style3">
                     <asp:TextBox ID="cityTB" runat="server" Width="250px"></asp:TextBox>
                 </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td class="auto-style2">&nbsp;</td>
+                <td class="auto-style3">
+                    &nbsp;</td>
                 <td>&nbsp;</td>
             </tr>
             <tr>
