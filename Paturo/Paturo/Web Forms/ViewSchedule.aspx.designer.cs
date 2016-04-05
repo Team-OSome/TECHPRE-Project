@@ -13,6 +13,15 @@ namespace Paturo.Web_Forms {
     public partial class viewSchedule {
         
         /// <summary>
+        /// Image1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image Image1;
+        
+        /// <summary>
         /// subjectLabel control.
         /// </summary>
         /// <remarks>
@@ -101,5 +110,14 @@ namespace Paturo.Web_Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label contactLabel;
+        
+        /// <summary>
+        /// chekOutBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button chekOutBtn;
     }
 }

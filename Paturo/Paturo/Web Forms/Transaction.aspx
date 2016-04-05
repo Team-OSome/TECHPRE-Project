@@ -89,13 +89,29 @@
                                     </td>
                                     <td class="auto-style7">
                                         <select class="input-block-level" name="D1">
-                                            <option>Januaryy</option>
-                                            <option>....</option>
-                                            <option>Decemberr</option>
+                                            <option>January</option>
+                                            <option>February</option>
+                                            <option>March</option>
+                                            <option>April</option>
+                                            <option>May</option>
+                                            <option>June</option>
+                                            <option>July</option>
+                                            <option>August</option>
+                                            <option>September</option>
+                                            <option>October</option>
+                                            <option>November</option>
+                                            <option>December</option>
                                         </select><select class="input-block-level" name="D2">
-                                            <option>20133</option>
-                                            <option>....</option>
-                                            <option>20155</option>
+                                            <option>2016</option>
+                                            <option>2017</option>
+                                            <option>2018</option>
+                                            <option>2019</option>
+                                            <option>2020</option>
+                                            <option>2021</option>
+                                            <option>2022</option>
+                                            <option>2023</option>
+                                            <option>2024</option>
+                                            <option>2025</option>
                                         </select></td>
                                 </tr>
                                 <tr>

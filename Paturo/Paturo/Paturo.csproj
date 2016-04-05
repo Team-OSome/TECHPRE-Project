@@ -170,6 +170,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Icons\20160314_115610.png" />
     <Content Include="Icons\artImg.png" />
     <Content Include="Icons\computerImg.png" />
     <Content Include="Icons\languageImg.png" />

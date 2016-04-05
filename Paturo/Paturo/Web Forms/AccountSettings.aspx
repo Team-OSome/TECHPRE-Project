@@ -118,10 +118,14 @@
             <td class="newStyle1">Category:</td>
             <td class="newStyle1">
                 <asp:DropDownList ID="categoryDropDownList" runat="server" CssClass="auto-style33" Width="186px">
-                    <asp:ListItem Value="Educational"></asp:ListItem>
+                    <asp:ListItem>Language</asp:ListItem>
+                    <asp:ListItem>Math</asp:ListItem>
+                    <asp:ListItem>Science</asp:ListItem>
                     <asp:ListItem Value="Sports"></asp:ListItem>
                     <asp:ListItem Value="Music"></asp:ListItem>
                     <asp:ListItem Value="Arts"></asp:ListItem>
+                    <asp:ListItem>Technology</asp:ListItem>
+                    <asp:ListItem>Music</asp:ListItem>
                     <asp:ListItem Value="Others"></asp:ListItem>
                 </asp:DropDownList>
             </td>

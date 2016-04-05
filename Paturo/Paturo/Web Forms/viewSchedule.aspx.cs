@@ -33,5 +33,10 @@ namespace Paturo.Web_Forms
             contactLabel.Text = aM.getOtherContactNumber(Session["selectedID"].ToString());
             
         }
+
+        protected void chekOutBtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Transaction.aspx");
+        }
     }
 }
